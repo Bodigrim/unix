@@ -19,7 +19,7 @@ jobs:
         os: [ubuntu-latest]
         ghc: ['7.8.4', '7.6.3', '7.4.2']
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.3.4
     - uses: actions/cache@v2.1.4
       name: Cache cabal stuff
       with:
@@ -52,7 +52,7 @@ jobs:
         os: [ubuntu-latest, macOS-latest]
         ghc: ['8.10', '8.8', '8.6', '8.4', '8.2', '8.0', '7.10']
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.3.4
     - uses: actions/setup-haskell@v1
       id: setup-haskell-cabal
       with:
@@ -80,7 +80,7 @@ jobs:
     # See https://github.com/vmactions/freebsd-vm#under-the-hood.
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.3.4
     - name: Build
       id: build-freebsd
       uses: vmactions/freebsd-vm@v0.1.2
